@@ -33,8 +33,8 @@ public readonly struct SceneLoadedSignal : IProjectSignal
 
 ProjectMessenger messenger;
 //...
+// Нет аллокации. Этосокращенная запись для messenger.Fire<SceneLoadedSignal>(new SceneLoadedSignal("Level1"))
 messenger.Fire(new SceneLoadedSignal("Level1"))
-// сокращенная запись для messenger.Fire<SceneLoadedSignal>(new SceneLoadedSignal("Level1"))
 ```
 
 Также если в проект добавить библиотеку Jetbrains Lifetimes и включить флаг компиляции DTOOLS_LIFETIMES, то включается поддержка Lifetime для указания времени жизни подписки на сигнал.
