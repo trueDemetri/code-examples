@@ -37,6 +37,8 @@ messenger.Fire(new SceneLoadedSignal("Level1"))
 // сокращенная запись для messenger.Fire<SceneLoadedSignal>(new SceneLoadedSignal("Level1"))
 ```
 
+Также если в проект добавить библиотеку Jetbrains Lifetimes и включить флаг компиляции DTOOLS_LIFETIMES, то включается поддержка Lifetime для указания времени жизни подписки на сигнал.
+
 ## FSM
 Такая же легковесная реализация машины состояний с переходами между состояниями и возможностью отладочного логирования.
 
